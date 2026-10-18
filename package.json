@@ -1,0 +1,22 @@
+{
+  "name": "contatos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@reduxjs/toolkit": "^2.5.0",
+    "react-redux": "^9.2.0",
+    "styled-components": "^6.1.0"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
+  }
+}

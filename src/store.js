@@ -1,0 +1,2 @@
+import {configureStore,createSlice,nanoid} from '@reduxjs/toolkit';
+const slice=createSlice({name:'contacts',initialState:[],reducers:{add:{prepare:contact=>({payload:{...contact,id:nanoid()}}),reducer:(state,action)=>{state.push(action.payload)}},edit:(state,action)=>state.map(c=>c.id===action.payload.id?action.payload:c),remove:(state,action)=>state.filter(c=>c.id!==action.payload)}});export const{add,edit,remove}=slice.actions;export const contactsReducer=slice.reducer;export const store=configureStore({reducer:{contacts:contactsReducer}});
